@@ -1,5 +1,5 @@
 # MyBlog_BY_ThinkPHP
-Create Project
-I'm study PHP!
-This is a blog By ThinkPHP  !
-I'm trying to do a php project!
+#0X0001:Create Project
+#0X0002:I'm study PHP!
+#0X0003:This is a blog By ThinkPHP  !
+#0X0004:I'm trying to do a php project!
