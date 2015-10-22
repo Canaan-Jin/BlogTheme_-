@@ -9,4 +9,17 @@ class IndexController extends Controller {
         //echo 'Hello World ! This\'s is my blog!';
         $this->display();
     }
+    //文章列表
+    public function articleList(){
+        $a=0;
+        while ($a<9000000){
+            $a++;
+        }
+        $this->display();
+    }
+    //文章页面
+    public function article(){
+        $this->display();
+    }
+    
 }
