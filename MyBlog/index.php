@@ -21,7 +21,7 @@ function Url($Domain,$Controller,$Action){
 if(1==1){
     define("Bootstrap_Css", '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/bootstrap.css');
     define("Bootstrap_Theme_Css", '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/bootstrap.css');
-    define('Pace_Css', '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/Pace/blue/pace-theme-minimal.css');
+    define('Pace_Css', '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/Pace/black/pace-theme-minimal.css');
     define('Animation_Css','/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/Animation.css');
     define('mCustomScrollbar_Css', '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/jquery.mCustomScrollbar.css');
     define('Font_Awesome', '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/font-awesome.min.css');
@@ -33,6 +33,10 @@ if(1==1){
     define('Jquery', '/MyBlog_BY_ThinkPHP/MyBlog/JavaScript/jquery-2.1.1.min.js');
     define('Pace_Js','/MyBlog_BY_ThinkPHP/MyBlog/JavaScript/pace.min.js');
     define('jquery_mCustomScrollbar_concat_Js','/MyBlog_BY_ThinkPHP/MyBlog/JavaScript/jquery.mCustomScrollbar.concat.min.js');
+    define('Ellipsis_JS','/MyBlog_BY_ThinkPHP/MyBlog/JavaScript/ellipsis.JS');
+    
+    define('history_adapter_jquery_js', '/MyBlog_BY_ThinkPHP/MyBlog/JavaScript/uncompressed/history.adapter.jquery.js');
+    define('history_js', '/MyBlog_BY_ThinkPHP/MyBlog/JavaScript/uncompressed/history.js');
 }
 
 

@@ -9,16 +9,23 @@ class IndexController extends Controller {
         //echo 'Hello World ! This\'s is my blog!';
         $this->display();
     }
+
     //文章列表
     public function articleList(){
-        $a=0;
-        while ($a<9000000){
+          $a=0;
+        while ($a ==90000000000000) {
             $a++;
         }
+        $ArticlesList=D('articlesinfo')->select();
+        $this->assign('ArticlesList',$ArticlesList);
         $this->display();
     }
     //文章页面
-    public function article(){
+    public function article($id){
+        for ($index = 0; $index < 9; $index++) {
+
+        }
+        
         $this->display();
     }
     

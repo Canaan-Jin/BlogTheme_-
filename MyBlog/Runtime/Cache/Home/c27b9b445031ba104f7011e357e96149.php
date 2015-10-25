@@ -14,6 +14,9 @@
         <script src="<?php echo Bootstrap_Js;?>"></script>
         <script src="<?php echo Pace_Js;?>"></script>
         <script src="<?php echo jquery_mCustomScrollbar_concat_Js;?>"></script>
+        <script src="<?php echo Ellipsis_JS;?>"></script>
+        <script src="<?php echo history_adapter_jquery_js;?>" type="text/javascript"></script>
+        <script src="<?php echo history_js;?>" type="text/javascript"></script>
         <style>
             html
             {/*整体html*/
@@ -63,10 +66,8 @@
             }
             #Left{
                 /*最左边blog信息 页面*/
-                padding-bottom: 0px;
-                padding-top: 30px;
                 padding-left: 25px;
-                padding-right:10px;
+                padding-right:0px;
             }
             .mCSB_scrollTools{
                 /*重写 滚动条*/
@@ -77,6 +78,9 @@
                 padding-top: 20px;
                 padding-left: 15px;
                  padding-right: 15px;
+            }
+             .mCustomScrollBox {
+                 padding-right:10px;
             }
             #article{
                 /*文章内容 设置 滚动条*/
@@ -129,7 +133,9 @@
                             <div id="Left" class="col-md-4 col-ld-4 with-full-screen " style="overflow:hidden;border-right:1px solid #eee;">
                                 <!-- 主信息 -->
                                 <center>
-                                    <h2 style='color:black;'><b>Blog</b></h2>
+                                    <div style="margin-top: 35px;">
+                                        <h2 style='color:black;'><b>Blog</b></h2>
+                                    </div>
                                     <center>
                                         <p style="color: #ABABAB;text-align: center;font-style:oblique;font-size: .875rem;">
                                             This's My Blog By ThinkPHP
@@ -247,10 +253,14 @@
        });
         
         //加载文章列表
-        $("#List").load("<?php Url('Home','Index','articleList');?>",function(){
-                $("#article").load("<?php Url('Home','Index','article')?>");
-        });
-      
+        $("#List").load("<?php Url('Home','Index','articleList');?>");
+        function openArtiele(id,e){
+            window.history.pushState(null,null, id);
+
+            $(".article-List").css('background-color', '');
+            $(e).parent().parent().css('background-color', '#FBFBFB');
+            $("#article").load("<?php Url('Home','Index','article')?>?id="+id);
+        }
 
     </script>
 </html>
