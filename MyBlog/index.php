@@ -20,7 +20,7 @@ function Url($Domain,$Controller,$Action){
 //css定义
 if(1==1){
     define("Bootstrap_Css", '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/bootstrap.css');
-    define("Bootstrap_Theme_Css", '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/bootstrap.css');
+    define("Bootstrap_Theme_Css", '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/bootstrap-theme.css');
     define('Pace_Css', '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/Pace/black/pace-theme-minimal.css');
     define('Animation_Css','/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/Animation.css');
     define('mCustomScrollbar_Css', '/MyBlog_BY_ThinkPHP/MyBlog/Content/Css/jquery.mCustomScrollbar.css');

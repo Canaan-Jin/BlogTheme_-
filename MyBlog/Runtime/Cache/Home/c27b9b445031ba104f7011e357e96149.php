@@ -20,33 +20,36 @@
         <style>
             html
             {/*整体html*/
-                height:100%;
+                //height:100%;
                 margin:0;
             }
             body
             {/*body*/
-                height:100%;
+                //height: 100%;
                 margin:0;
                 padding-left: 0px;
                 padding-right: 0px;
                 overflow-x: hidden;
                 overflow-y: hidden;
                 color:#777;
+                font-family: 'SimHei';
             }
             .with-full-screen{/*在做布局height 100%*/
-                height:100%;
+               height:100%;
             }
              .container-fluid,.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
                 /*重写 这些css 因为默认 是有边距的*/
-                padding-left:0px;
+                //padding-left:0px;
             }
             .article-List{/*文章列表 div的 设置*/
-                padding-bottom: 29px;
-                padding-top: 29px;
-                padding-left: 15px;
-                padding-right:15px;
-                height: 187px;
+                //padding-bottom: 29px;
+                //padding-top: 29px;
+                //padding-left: 15px;
+                //padding-right:15px;
+                //height: 25%;
+                //wdith:100%;
                 border-bottom:1px solid #eee;
+                border-top:1px solid #eee;
             }
              .article-Title{/*文章列表的 title*/
                 width: 100%;
@@ -78,14 +81,14 @@
                 padding-top: 20px;
                 padding-left: 15px;
                  padding-right: 15px;
+                 
             }
-             .mCustomScrollBox {
+           #left  .mCustomScrollBox {
                  padding-right:10px;
             }
             #article{
                 /*文章内容 设置 滚动条*/
                 overflow-y:scroll;
-                
             }
             .sidebar-social-list{
                 /*标志 ul 的样式*/
@@ -124,13 +127,13 @@
         </style>
     </head>
     <body >
-        <div class="container-fluid with-full-screen hidden-sm hidden-xs" style="width:100%;   z-index:1" >
+        <div class="container-fluid with-full-screen " style="width:100%;   z-index:1" >
             <div class="row-fluid with-full-screen" >
                 <div class="row with-full-screen" >
-                    <div class="col-md-4 col-ld-4  with-full-screen" style="border-right:1px solid #eee;padding-right:0px;" >
+                    <div class="col-md-4 col-lg-4  with-full-screen" style="border-right:1px solid #eee;padding-right:0px;padding-left:0px;" >
                         <!-- 主信息和文章列表 -->
                        
-                            <div id="Left" class="col-md-4 col-ld-4 with-full-screen " style="overflow:hidden;border-right:1px solid #eee;">
+                            <div id="Left" class="col-md-4 col-lg-4 col-xs-12 col-sm-12  with-full-screen " style="overflow:hidden;border-right:1px solid #eee;padding-left:0px;">
                                 <!-- 主信息 -->
                                 <center>
                                     <div style="margin-top: 35px;">
@@ -141,13 +144,23 @@
                                             This's My Blog By ThinkPHP
                                         </p>
                                     </center>
-                                    <div style="width:100%;padding-top: 40px;">
+                                    <div style="width:100%;padding-top: 15px;">
                                         <center>
-                                            <p><b>首页</b></p>
-                                            <p><b>联系</b></p>
-                                             <p><b>关于</b></p>
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-12 col-xs-4 col-sm-4" style="text-align:center;padding-right: 0px; padding-left:0px;">
+                                                     <p><b>首页</b></p>
+                                                </div>
+                                                <div class="col-md-12 col-lg-12 col-xs-4 col-sm-4" style="text-align:center;padding-right: 0px;padding-left:0px; ">
+                                                     <p><b>联系</b></p>
+                                                </div>
+                                                <div class="col-md-12 col-lg-12 col-xs-4 col-sm-4" style="text-align:center; padding-right: 0px;padding-left:0px;">
+                                                     <p><b>关于</b></p>
+                                                </div>
+                                            </div>
+                                            
+                                             <hr>
                                         </center>
-                                        <hr>
+                                       
                                         
                                         <ul class="sidebar-social-list">
                                             <li class="">
@@ -221,16 +234,20 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                          <hr>
-                                        <p class="site-copyright">© Copyright 2014 - 2015</p>
+                                          
+                                          <div class="col-md-12 col-lg-12 hidden-xs hidden-sm" style="padding-left:0px;">
+                                              <hr>
+                                               <p class="site-copyright">© Copyright 2014 - 2015</p>
+                                          </div>
+                                       
                                     </div>
                                 </center>
                             </div>
-                            <div id="List" class="col-md-8 col-ld-8 with-full-screen" style="overflow:hidden;border-right:1px solid #eee;padding-right:0px;">
+                            <div id="List" class="col-md-8 col-lg-8 col-xs-12 col-sm-12" style="overflow:hidden;border-right:1px solid #eee;padding-right:0px;padding-left:0px;">
                                  <!-- 文章列表 -->
                             </div>
                     </div>
-                    <div id='article' class="col-md-8 col-ld-8 with-full-screen" style=''>
+                    <div id='article' class="col-md-8 col-lg-8 col-xs-12 col-sm-12 with-full-screen" style='padding-left:0px;'>
                         <!-- 文章内容页-->
                         
                     </div>
@@ -239,8 +256,8 @@
         </div>
     </body>
     <script type="text/javascript">
-        //设置滚动条
-        $("#Left").mCustomScrollbar();
+        //初始化
+        //clientWithChenge();
         //鼠标进入事件
         $(".sidebar-social-list li").on("mouseover",function(){
            //#343b4a
@@ -254,12 +271,52 @@
         
         //加载文章列表
         $("#List").load("<?php Url('Home','Index','articleList');?>");
+         //加载文章列表
+        $("#article").load("<?php Url('Home','Index','article')?>?id="+1);
+        var $root = $('html, body');
         function openArtiele(id,e){
-            window.history.pushState(null,null, id);
-
+            window.history.pushState(null,null, "?id="+id);
             $(".article-List").css('background-color', '');
             $(e).parent().parent().css('background-color', '#FBFBFB');
-            $("#article").load("<?php Url('Home','Index','article')?>?id="+id);
+            $("#article").load("<?php Url('Home','Index','article')?>?id="+id,function(){
+                $($root).animate({scrollTop:$("#article").offset().top},1000);
+                //clientWithChenge();
+            });
+        }
+        //浏览器大小改变的时候
+        window.onresize=function(){  
+            clientWithChenge();  
+        }
+        //初始化方法
+        function clientWithChenge(){
+            console.info("执行了");
+            if(document.documentElement.clientWidth>=992){
+                    $($root).animate({
+                        scrollTop:$("#article").offset().top//这里获取要移动到的对象
+                        },
+                        0
+                    );
+                    $("#List").css("margin-top",'0px');
+                    $("#List").mCustomScrollbar();
+                    $("#Left").mCustomScrollbar();
+                    $(".article-thisArticle").css("height","100%");
+                    $("#article").css("overflow-y","scroll");
+                    $("body").css("overflow-y",'hidden');
+                    $("#Left").addClass('with-full-screen');
+                    $("#Left").parent().addClass('with-full-screen');
+                    $("#article").addClass("with-full-screen");
+                }else{
+                    $("#Left").removeClass('with-full-screen');
+                    $("#Left").parent().removeClass('with-full-screen');
+                    $("#List").css("margin-top",'20px');
+                    $(".article-thisArticle").css("height","");
+                    $("#article").css("height","");
+                    $("#article").css("overflow-y","hidden");
+                    $("#article").removeClass("with-full-screen");
+                    $("body").css("overflow-y",'scroll');
+                    $("#Left").mCustomScrollbar("destroy");
+                    $("#List").mCustomScrollbar("destroy");
+                }
         }
 
     </script>
